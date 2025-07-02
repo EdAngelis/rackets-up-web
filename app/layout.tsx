@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import NextAuthProvider from "@/context/NextAuthContext";
-import Footer from "@/components/sessions/footer/footer";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -31,8 +29,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NextAuthProvider>{children}</NextAuthProvider>
-        <Footer />
+        {children}
       </body>
     </html>
   );

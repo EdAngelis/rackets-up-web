@@ -1,11 +1,10 @@
-import Header from "@/components/sessions/header/header";
-import Login from "@/components/sessions/signin/page";
+import ResetPassword from "@/app/reset-password/page";
+
 export default function Home() {
   return (
     <div>
       <main>
-        <Header />
-        <Login />
+        <ResetPassword />
       </main>
     </div>
   );
