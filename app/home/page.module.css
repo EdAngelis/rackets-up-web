@@ -1,5 +1,13 @@
-.examHistory {
+.container {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  background-color: white;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }

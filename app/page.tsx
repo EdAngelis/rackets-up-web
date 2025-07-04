@@ -1,10 +1,10 @@
-import ResetPassword from "@/app/reset-password/page";
+import HomePage from "@/app/home/page";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <ResetPassword />
+        <HomePage />
       </main>
     </div>
   );

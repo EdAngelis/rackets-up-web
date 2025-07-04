@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Exam-AI",
-  description: "Generate exam questions from text, topis or sites using AI",
+  title: "Rackets Up",
+  description: "Rackets Sports Management",
 };
 
 export default function RootLayout({
