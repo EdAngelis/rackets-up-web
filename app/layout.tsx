@@ -16,6 +16,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Rackets Up",
   description: "Rackets Sports Management",
+  icons: {
+    icon: "/logo2.png",
+    shortcut: "/logo2.png",
+    apple: "/logo2.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo2.png" type="image/png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
