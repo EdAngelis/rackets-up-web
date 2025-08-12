@@ -1,0 +1,51 @@
+/* Google Play themed button */
+.playStoreButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: #fff;
+	background: #202124; /* near-google black */
+	border: 1px solid rgba(255,255,255,0.12);
+	padding: 10px 14px;
+	border-radius: 8px;
+	transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+	will-change: transform;
+}
+
+.playStoreButton:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.icon {
+	width: 22px;
+	height: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #34a853; /* Google green */
+}
+
+.textBlock {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+}
+
+.kicker {
+	font-size: 10px;
+	opacity: 0.85;
+}
+
+.brand {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* Full width variant if parent applies width */
+.fullWidth {
+	width: 100%;
+	justify-content: center;
+}
+

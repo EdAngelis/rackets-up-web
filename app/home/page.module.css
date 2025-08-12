@@ -1,13 +1,89 @@
 .container {
-  margin-top: 3rem;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/images/background-clay.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.firstSession {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .logoContainer {
   display: flex;
   justify-content: center;
+  align-self: center;
+  width: 20%;
+  border-radius: 10px;
   align-items: center;
   margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
 }
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.storeButtons {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Title under the logo */
+.title {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  /* Thick black border */
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.3); /* subtle contrast to ensure readability */
+}
+
+/* Features list under store buttons */
+.features {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.featureList {
+  color:black;
+  list-style-type: circle; /* circle bullets */
+  padding-left: 1.25rem; /* space for bullets */
+  max-width: 720px;
+}
+
+.featureList li {
+  margin: 0.15rem 0;
+  font-size: 12px;
+}
+
+/* Smartwatch image section */
+.smartwatch {
+  
+}
+
+.smartwatchImageWrapper {
+  
+}
+
+
