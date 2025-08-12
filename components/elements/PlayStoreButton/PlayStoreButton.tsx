@@ -21,8 +21,8 @@ const PlayStoreButton: React.FC = () => {
         <Image
           src="/images/playstore-svgrepo-com.svg"
           alt=""
-          width={22}
-          height={22}
+          width={30}
+          height={30}
         />
       </span>
       <span className={styles.textBlock}>

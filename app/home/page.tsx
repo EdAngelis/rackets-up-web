@@ -31,8 +31,8 @@ const Page: NextPage = () => {
                   <Image
                     src="/images/smartwatch.png"
                     alt="Smartwatch with Rackets Up features"
-                    width={80}
-                    height={120}
+                    width={100}
+                    height={150}
                     priority={false}
                   />
                 </div>
