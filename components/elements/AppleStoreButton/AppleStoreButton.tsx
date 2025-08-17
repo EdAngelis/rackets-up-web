@@ -7,7 +7,7 @@ import Image from "next/image";
  * An Apple App Store-themed button linking to the provided TestFlight URL.
  */
 const AppleStoreButton: React.FC = () => {
-  const href = "https://testflight.apple.com/join/gjkUxSXt";
+  const href = "https://apps.apple.com/br/app/rackets-up/id6749012815?l=en-GB";
 
   return (
     <a
