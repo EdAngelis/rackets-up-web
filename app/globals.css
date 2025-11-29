@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --blue-50: #ebf8ff;
   --blue-100: #bee3f8;
@@ -47,6 +51,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font);
+  background: #111d1e;
 }
 
 main {

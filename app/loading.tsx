@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './page.module.css';
+
 
 const Loading = () => {
   return (
-    <div className={styles.loading}>
+    <div className="flex justify-center items-center h-screen text-2xl text-[#555]">
       <p>Loading...</p>
     </div>
   );

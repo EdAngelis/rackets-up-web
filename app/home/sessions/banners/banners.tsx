@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
+import Image from "next/image";
 import BannerCarousel from "../../../../components/elements/BannerCarousel/BannerCarousel";
+import PlayStoreButton from "../../../../components/elements/PlayStoreButton/PlayStoreButton";
+import AppleStoreButton from "../../../../components/elements/AppleStoreButton/AppleStoreButton";
 
 export default function Banners() {
   const bannersDir = path.join(process.cwd(), "public", "images", "banners");
@@ -19,7 +22,33 @@ export default function Banners() {
 
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1rem" }}>
-      <BannerCarousel images={images} intervalMs={4000} />
+      <BannerCarousel images={images} intervalMs={4000}>
+        <div className="flex flex-row items-center justify-center w-full h-full px-4">
+          <div className="relative flex flex-col gap-4 items-center z-20 h-full justify-end">
+            <PlayStoreButton />
+            <AppleStoreButton />
+          </div>
+          <div className="relative flex justify-center items-end h-full">
+            <div className="relative w-[70px] h-[70px] z-10 left-10">
+              <Image
+                src="/images/watch-no-background.png"
+                alt="Watch"
+                width={100}
+                height={100}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <div className="relative w-[100px] h-[200px]">
+              <Image
+                src="/images/mobile-no-background.png"
+                alt="Mobile"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>
+        </div>
+      </BannerCarousel>
     </div>
   );
 }
