@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Anton, Roboto } from "next/font/google";
 import "./globals.css";
+
+const anton = Anton({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-anton",
+});
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +41,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${roboto.variable} ${roboto.className}`}
+      >
         {children}
       </body>
     </html>

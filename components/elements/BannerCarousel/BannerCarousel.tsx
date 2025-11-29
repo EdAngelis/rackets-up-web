@@ -68,13 +68,15 @@ export default function BannerCarousel({
               style={{ objectFit: "cover" }}
               sizes="(max-width: 1200px) 100vw, 1200px"
             />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
           </div>
         ))}
       </div>
 
       {children && (
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none">
-          <div className="pointer-events-auto">{children}</div>
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none h-full">
+          <div className="pointer-events-auto h-full">{children}</div>
         </div>
       )}
 

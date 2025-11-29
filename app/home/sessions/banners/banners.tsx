@@ -4,6 +4,7 @@ import Image from "next/image";
 import BannerCarousel from "../../../../components/elements/BannerCarousel/BannerCarousel";
 import PlayStoreButton from "../../../../components/elements/PlayStoreButton/PlayStoreButton";
 import AppleStoreButton from "../../../../components/elements/AppleStoreButton/AppleStoreButton";
+import TypeWriter from "../../../../components/elements/typing/typing";
 
 export default function Banners() {
   const bannersDir = path.join(process.cwd(), "public", "images", "banners");
@@ -21,20 +22,38 @@ export default function Banners() {
   }
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1rem" }}>
+    <div style={{ margin: "0 auto", padding: "0.3rem" }}>
       <BannerCarousel images={images} intervalMs={4000}>
         <div className="flex flex-row items-center justify-center w-full h-full px-4">
           <div className="relative flex flex-col gap-4 items-center z-20 h-full justify-end">
-            <PlayStoreButton />
-            <AppleStoreButton />
+            <div className="absolute flex-1 top-10 left-[0px]">
+              <TypeWriter
+                text={[
+                  {
+                    static: "For the racket community.",
+                    typeText: "Let's build it together",
+                  },
+                  { static: "", typeText: "Create and Enroll in Tournaments" },
+                  { static: "", typeText: "Get Statistics from your matches" },
+                  { static: "", typeText: "Stop Asking what the score is" },
+                  { static: "", typeText: "Create and Enroll in Tournaments" },
+                ]}
+                delay={100}
+                infinite={true}
+                pause={1500}
+              />
+            </div>
+            <div className="relative flex flex-col bottom-10 gap-3">
+              <PlayStoreButton />
+              <AppleStoreButton />
+            </div>
           </div>
-          <div className="relative flex justify-center items-end h-full">
+          <div className="relative flex justify-center items-end">
             <div className="relative w-[70px] h-[70px] z-10 left-10">
               <Image
                 src="/images/watch-no-background.png"
                 alt="Watch"
-                width={100}
-                height={100}
+                fill
                 style={{ objectFit: "contain" }}
               />
             </div>

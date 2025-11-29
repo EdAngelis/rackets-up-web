@@ -12,7 +12,8 @@ const PlayStoreButton: React.FC<{ className?: string }> = ({
 
   return (
     <a
-      className={`inline-flex items-center w-full max-w-[220px] gap-2 no-underline text-white bg-black border border-white/12 px-2 py-1.5 rounded-md text-sm transition-all duration-120 ease-out hover:-translate-y-px hover:shadow-lg ${className}`}
+      className={`inline-flex items-center w-full max-w-[220px] gap-2 no-underline text-white bg-black border border-white/12 px-2 py-1.5 rounded-md text-sm transition-all duration-120 ease-out hover:-translate-y-px hover:shadow-lg shadow-2xl ${className}`}
+      style={{ filter: "drop-shadow(0 12px 28px rgba(0,0,0,0.85))" }}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
