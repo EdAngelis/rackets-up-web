@@ -40,7 +40,7 @@ export default function Banners() {
                 ]}
                 delay={100}
                 infinite={true}
-                pause={1500}
+                pause={900}
               />
             </div>
             <div className="relative flex flex-col bottom-10 gap-3">
