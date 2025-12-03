@@ -5,6 +5,7 @@ import BannerCarousel from "../../../../components/elements/BannerCarousel/Banne
 import PlayStoreButton from "../../../../components/elements/PlayStoreButton/PlayStoreButton";
 import AppleStoreButton from "../../../../components/elements/AppleStoreButton/AppleStoreButton";
 import TypeWriter from "../../../../components/elements/typing/typing";
+import styles from "./banners.module.css";
 
 export default function Banners() {
   const bannersDir = path.join(process.cwd(), "public", "images", "banners");
@@ -27,20 +28,22 @@ export default function Banners() {
         <div className="flex flex-row items-center justify-center w-full h-full px-4">
           <div className="relative flex flex-col gap-4 items-center z-20 h-full justify-end">
             <div className="absolute flex-1 top-10 left-[-30px]">
-              <div className="text-white font-roboto text-[18px]">
-                For all Rackets Sports
-              </div>
+              <div className={styles.headline}></div>
               <TypeWriter
                 text={[
                   {
-                    static: "",
+                    static: "For all Rackets Sports",
                     typeText:
                       "Enroll in Tournaments |Get Statistics |Free your mind",
+                  },
+                  {
+                    static: "The Right place to begin",
+                    typeText: "Find Clubs |Find Coaches |Meet Players",
                   },
                 ]}
                 delay={100}
                 infinite={true}
-                pause={900}
+                pause={1500}
               />
             </div>
             <div className="relative flex flex-col bottom-10 gap-3">
@@ -49,7 +52,7 @@ export default function Banners() {
             </div>
           </div>
           <div className="relative flex justify-center items-end">
-            <div className="relative w-[70px] h-[70px] z-10 left-10">
+            <div className={styles.watchImage}>
               <Image
                 src="/images/watch-no-background.png"
                 alt="Watch"
@@ -57,7 +60,7 @@ export default function Banners() {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            <div className="relative w-[100px] h-[200px]">
+            <div className={styles.mobileImage}>
               <Image
                 src="/images/mobile-no-background.png"
                 alt="Mobile"

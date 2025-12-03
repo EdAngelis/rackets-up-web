@@ -1,0 +1,239 @@
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 3rem;
+    /* py-12 */
+    padding-bottom: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    /* px-4 */
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    /* gap-8 */
+}
+
+/* Responsive container */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 768px;
+        /* md breakpoint default container behavior roughly */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+.brandSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    /* gap-2 */
+}
+
+@media (min-width: 768px) {
+    .brandSection {
+        align-items: flex-start;
+    }
+}
+
+.brandTitle {
+    font-size: 1.5rem;
+    /* text-2xl mobile */
+    line-height: 2rem;
+    font-weight: 700;
+    /* font-bold */
+    letter-spacing: -0.05em;
+    /* tracking-tighter */
+}
+
+@media (min-width: 768px) {
+    .brandTitle {
+        font-size: 2.25rem;
+        /* text-4xl desktop */
+        line-height: 2.5rem;
+    }
+}
+
+.brandTagline {
+    font-size: 0.875rem;
+    /* text-sm mobile */
+    line-height: 1.25rem;
+    color: #9ca3af;
+    /* text-gray-400 */
+}
+
+@media (min-width: 768px) {
+    .brandTagline {
+        font-size: 1rem;
+        /* text-base desktop */
+        line-height: 1.5rem;
+    }
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    /* gap-3 */
+}
+
+@media (min-width: 768px) {
+    .contactSection {
+        align-items: flex-start;
+    }
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    /* text-lg mobile */
+    line-height: 1.75rem;
+    font-weight: 600;
+    /* font-semibold */
+    margin-bottom: 0.25rem;
+    /* mb-1 */
+}
+
+@media (min-width: 768px) {
+    .sectionTitle {
+        font-size: 1.5rem;
+        /* text-2xl desktop */
+        line-height: 2rem;
+    }
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* gap-2 */
+    color: #d1d5db;
+    /* text-gray-300 */
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.contactLink:hover {
+    color: white;
+}
+
+.icon {
+    font-size: 1.25rem;
+    /* text-xl */
+}
+
+.socialSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* gap-4 */
+}
+
+@media (min-width: 768px) {
+    .socialSection {
+        align-items: flex-end;
+    }
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    /* gap-4 */
+}
+
+.socialIcon {
+    width: 2.5rem;
+    /* w-10 */
+    height: 2.5rem;
+    /* h-10 */
+    border-radius: 9999px;
+    /* rounded-full */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* bg-white/10 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    color: white;
+    /* Inherited usually but explicit here for base state */
+}
+
+.socialIcon:hover {
+    background-color: white;
+    color: black;
+}
+
+.copyright {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
+    /* mt-8 */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.875rem;
+    /* text-sm */
+    line-height: 1.25rem;
+    color: #6b7280;
+    /* text-gray-500 */
+    padding-top: 1rem;
+    /* Added some padding for the border separation visual */
+}
+
+@media (min-width: 768px) {
+    .copyright {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .copyright {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .copyright {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .copyright {
+        max-width: 1536px;
+    }
+}

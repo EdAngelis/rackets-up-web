@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import styles from "./typing.module.css";
 
 interface ITextObject {
   typeText: string;
@@ -58,11 +59,9 @@ export default function Typewriter({
   } as React.CSSProperties;
 
   return (
-    <div className="w-full min-w-[300px]" style={outlineStyle}>
-      <span className="flex flex-wrap text-[18px]">
-        {text[currentWord].static}
-      </span>
-      <div className="text-[16px]">
+    <div className={styles.container} style={outlineStyle}>
+      <span className={styles.staticText}>{text[currentWord].static}</span>
+      <div className={styles.typedText}>
         {currentText.map((char, index) =>
           char === "|" ? (
             <br key={index} />
