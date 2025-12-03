@@ -26,17 +26,17 @@ export default function Banners() {
       <BannerCarousel images={images} intervalMs={4000}>
         <div className="flex flex-row items-center justify-center w-full h-full px-4">
           <div className="relative flex flex-col gap-4 items-center z-20 h-full justify-end">
-            <div className="absolute flex-1 top-10 left-[0px]">
+            <div className="absolute flex-1 top-10 left-[-30px]">
+              <div className="text-white font-roboto text-[18px]">
+                For all Rackets Sports
+              </div>
               <TypeWriter
                 text={[
                   {
-                    static: "For the racket community.",
-                    typeText: "Let's build it together",
+                    static: "",
+                    typeText:
+                      "Enroll in Tournaments |Get Statistics |Free your mind",
                   },
-                  { static: "", typeText: "Create and Enroll in Tournaments" },
-                  { static: "", typeText: "Get Statistics from your matches" },
-                  { static: "", typeText: "Stop Asking what the score is" },
-                  { static: "", typeText: "Create and Enroll in Tournaments" },
                 ]}
                 delay={100}
                 infinite={true}

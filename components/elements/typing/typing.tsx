@@ -53,29 +53,30 @@ export default function Typewriter({
   }, [currentIndex, delay, infinite, text, currentWord, currentText, pause]);
 
   const outlineStyle = {
-    WebkitTextStroke: "0.6px #ffffff",
-    fontFamily: "var(--font-anton), sans-serif",
+    //WebkitTextStroke: "0.6px #ffffff",
+    fontFamily: "var(--font-roboto), sans-serif",
   } as React.CSSProperties;
 
   return (
-    <div className="w-full min-w-[200px]" style={outlineStyle}>
+    <div className="w-full min-w-[300px]" style={outlineStyle}>
       <span className="flex flex-wrap text-[18px]">
         {text[currentWord].static}
       </span>
-      <span className="flex flex-wrap items-center text-[16px] ">
-        {currentText.map((char, index) => (
-          <span key={index} className="">
-            {char === " " ? (
-              <span
-                aria-hidden
-                className="inline-block w-1 h-[1em] align-middle"
-              />
-            ) : (
-              char
-            )}
-          </span>
-        ))}
-      </span>
+      <div className="text-[16px]">
+        {currentText.map((char, index) =>
+          char === "|" ? (
+            <br key={index} />
+          ) : char === " " ? (
+            <span
+              key={index}
+              aria-hidden
+              className="inline-block w-1 h-[1em] align-middle"
+            />
+          ) : (
+            <span key={index}>{char}</span>
+          )
+        )}
+      </div>
     </div>
   );
 }
