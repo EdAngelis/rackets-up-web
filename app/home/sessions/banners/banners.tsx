@@ -4,7 +4,7 @@ import Image from "next/image";
 import BannerCarousel from "../../../../components/elements/BannerCarousel/BannerCarousel";
 import PlayStoreButton from "../../../../components/elements/PlayStoreButton/PlayStoreButton";
 import AppleStoreButton from "../../../../components/elements/AppleStoreButton/AppleStoreButton";
-import TypeWriter from "../../../../components/elements/typing/typing";
+
 import styles from "./banners.module.css";
 
 export default function Banners() {
@@ -23,41 +23,26 @@ export default function Banners() {
   }
 
   return (
-    <div style={{ margin: "0 auto", padding: "0.3rem" }}>
+    <div className={styles.wrapper}>
       <BannerCarousel images={images} intervalMs={4000}>
-        <div className="flex flex-row items-center justify-center w-full h-full px-4">
-          <div className="relative flex flex-col gap-4 items-center z-20 h-full justify-end">
-            <div className="absolute flex-1 top-10 left-[-30px]">
-              <div className={styles.headline}></div>
-              <TypeWriter
-                text={[
-                  {
-                    static: "For all Rackets Sports",
-                    typeText:
-                      "Enroll in Tournaments |Get Statistics |Free your mind",
-                  },
-                  {
-                    static: "The Right place to begin",
-                    typeText: "Find Clubs |Find Coaches |Meet Players",
-                  },
-                ]}
-                delay={100}
-                infinite={true}
-                pause={1500}
-              />
+      <div className={styles.container}>
+          <div className={styles.contentWrapper}>
+            <div className={styles.textOverlay}>
+              <h1 className={styles.title}>For all Rackets Sports</h1>
+              <p className={styles.subTitle}>For Players, Clubs & Coaches</p>
             </div>
-            <div className="relative flex flex-col bottom-10 gap-3">
+            <div className={styles.storeButtons}>
               <PlayStoreButton />
               <AppleStoreButton />
             </div>
           </div>
-          <div className="relative flex justify-center items-end">
+          <div className={styles.imagesWrapper}>
             <div className={styles.watchImage}>
               <Image
                 src="/images/watch-no-background.png"
                 alt="Watch"
                 fill
-                style={{ objectFit: "contain" }}
+                className={styles.imageContain}
               />
             </div>
             <div className={styles.mobileImage}>
@@ -65,7 +50,7 @@ export default function Banners() {
                 src="/images/mobile-no-background.png"
                 alt="Mobile"
                 fill
-                style={{ objectFit: "contain" }}
+                className={styles.imageContain}
               />
             </div>
           </div>

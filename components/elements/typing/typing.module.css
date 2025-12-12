@@ -6,11 +6,17 @@
 .staticText {
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "var(--font-roboto), sans-serif";
 }
 
 .typedText {
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "var(--font-roboto), sans-serif";
 }
 
 /* sm: 640px */
@@ -18,11 +24,13 @@
   .container {
     min-width: 220px;
   }
+
   .staticText {
-    font-size: 18px;
+    font-size: 24px;
   }
+
   .typedText {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 
@@ -31,11 +39,13 @@
   .container {
     min-width: 320px;
   }
+
   .staticText {
     font-size: 24px;
   }
+
   .typedText {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -44,9 +54,11 @@
   .container {
     min-width: 420px;
   }
+
   .staticText {
     font-size: 30px;
   }
+
   .typedText {
     font-size: 30px;
   }

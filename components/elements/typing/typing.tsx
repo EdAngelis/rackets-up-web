@@ -53,13 +53,8 @@ export default function Typewriter({
     return () => clearTimeout(timeout);
   }, [currentIndex, delay, infinite, text, currentWord, currentText, pause]);
 
-  const outlineStyle = {
-    //WebkitTextStroke: "0.6px #ffffff",
-    fontFamily: "var(--font-roboto), sans-serif",
-  } as React.CSSProperties;
-
   return (
-    <div className={styles.container} style={outlineStyle}>
+    <div className={styles.container}>
       <span className={styles.staticText}>{text[currentWord].static}</span>
       <div className={styles.typedText}>
         {currentText.map((char, index) =>
