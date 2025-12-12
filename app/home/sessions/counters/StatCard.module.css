@@ -1,0 +1,147 @@
+.container {
+    position: relative;
+}
+
+/* Theme Definitions */
+.themeBlue {
+    --gradient-start: #3b82f6;
+    /* blue-500 */
+    --gradient-end: #06b6d4;
+    /* cyan-500 */
+    --primary-color: #3b82f6;
+}
+
+.themeIndigo {
+    --gradient-start: #6366f1;
+    /* indigo-500 */
+    --gradient-end: #a855f7;
+    /* purple-500 */
+    --primary-color: #6366f1;
+}
+
+.themeEmerald {
+    --gradient-start: #10b981;
+    /* emerald-500 */
+    --gradient-end: #14b8a6;
+    /* teal-500 */
+    --primary-color: #10b981;
+}
+
+.backgroundDecoration {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+    opacity: 0;
+    border-radius: 1rem;
+    /* rounded-2xl */
+    transition: opacity 500ms;
+}
+
+.container:hover .backgroundDecoration {
+    opacity: 0.05;
+}
+
+.card {
+    position: relative;
+    padding: 2rem;
+    /* p-8 */
+    background-color: #ffffff;
+    /* bg-white */
+    border: 1px solid #f1f5f9;
+    /* border-slate-100 */
+    border-radius: 1rem;
+    /* rounded-2xl */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    /* shadow-sm */
+    transition: all 300ms;
+    transform: translate(0, 0);
+    /* default transform */
+}
+
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* hover:shadow-xl */
+    transform: translateY(-0.25rem);
+    /* hover:-translate-y-1 */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    /* mb-4 */
+}
+
+.iconWrapper {
+    padding: 0.75rem;
+    /* p-3 */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    background-color: var(--primary-color);
+    background-opacity: 0.1;
+    /* This doesn't work directly in CSS like Tailwind, using rgba or opacity trick */
+    /* Better approach for bg-opacity-10 with variable color: */
+    background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
+}
+
+.icon {
+    width: 2rem;
+    /* w-8 */
+    height: 2rem;
+    /* h-8 */
+    color: var(--primary-color);
+}
+
+.growthLabel {
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 700;
+    /* font-bold */
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+    color: #94a3b8;
+    /* text-slate-400 */
+    text-transform: uppercase;
+}
+
+.numberWrapper {
+    display: flex;
+    align-items: baseline;
+    column-gap: 0.25rem;
+    /* space-x-1 */
+}
+
+.number {
+    font-size: 2.25rem;
+    /* text-4xl */
+    line-height: 2.5rem;
+    font-weight: 800;
+    /* font-extrabold */
+    color: #0f172a;
+    /* text-slate-900 */
+    letter-spacing: -0.025em;
+    /* tracking-tight */
+    margin: 0;
+}
+
+.label {
+    margin-top: 0.5rem;
+    /* mt-2 */
+    color: #64748b;
+    /* text-slate-500 */
+    font-weight: 500;
+    /* font-medium */
+}
+
+.decorativeLine {
+    margin-top: 1.5rem;
+    /* mt-6 */
+    height: 0.25rem;
+    /* h-1 */
+    width: 3rem;
+    /* w-12 */
+    border-radius: 9999px;
+    /* rounded-full */
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}

@@ -1,0 +1,122 @@
+.container {
+    position: relative;
+    padding: 5rem 1rem;
+    /* py-20 px-4 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+    min-height: 80vh;
+    /* Ensure it takes up space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contentWrapper {
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+        /* md:text-5xl */
+    }
+}
+
+.subtitle {
+    font-size: 2.25rem;
+    /* text-xl */
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-style: italic;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    /* Added for glassmorphism effect */
+    border-radius: 1.25rem;
+    /* 20px */
+    padding: 2.5rem 1.5rem;
+    /* 40px 20px */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 1024px) {
+    .card {
+        flex-direction: row;
+        padding: 3rem;
+        gap: 3rem;
+    }
+}
+
+.textColumn {
+    flex: 1;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .textColumn {
+        padding-right: 2rem;
+        padding-bottom: 0;
+        text-align: left;
+    }
+}
+
+.description {
+    font-size: 2.125rem;
+    /* 18px */
+    line-height: 1.5;
+    /* 32px */
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imageColumn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 1rem;
+    /* 15px */
+    overflow: hidden;
+    /* Removed the white background/shadow from previous design as it might clash with glass card */
+}

@@ -21,13 +21,17 @@
 
   --muted: #d4d4d4;
 
-  --redwrong: #ff0000; /* Removed hyphen */
-  --greencorrect: #00ff00; /* Removed hyphen */
+  --redwrong: #ff0000;
+  /* Removed hyphen */
+  --greencorrect: #00ff00;
+  /* Removed hyphen */
   --score-pass: green;
   --color-whatsapp: #25D366;
   --score-fail: red;
-  --option-correct-bg: rgba(0, 255, 0, 0.1); /* Slight green background */
-  --option-incorrect-bg: rgba(255, 0, 0, 0.1); /* Slight red background */
+  --option-correct-bg: rgba(0, 255, 0, 0.1);
+  /* Slight green background */
+  --option-incorrect-bg: rgba(255, 0, 0, 0.1);
+  /* Slight red background */
 
   /* FONTS */
 
@@ -43,17 +47,28 @@
 
 }
 
-html, body {
-  margin: 0;
+html,
+body {
   padding: 0;
-  width: 100%;
-  min-height: 100vh; 
+  max-width: 90%;
+  width: 90%;
+  min-height: 100vh;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font);
   background: #111d1e;
 }
 
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 main {
-  flex: 1; 
+  flex: 1;
 }
