@@ -3,7 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './BasicSession.module.css';
 
-const BasicSession = () => {
+interface BasicSessionProps {
+  title: string;
+  subTitle: string;
+  description: string;
+  image: string;
+}
+
+const BasicSession = ({ title, subTitle, description, image }: BasicSessionProps) => {
   return (
     <section className={styles.container}>
       <div className={styles.contentWrapper}>
@@ -11,9 +18,9 @@ const BasicSession = () => {
         {/* Header Section */}
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Bring your game into the new era
+            {title}
           </h2>
-          <span className={styles.subtitle}>leave the analog behind, generate data from your match.</span>
+          <span className={styles.subtitle}>{subTitle}</span>
         </div>
 
         {/* Content Card */}
@@ -22,7 +29,12 @@ const BasicSession = () => {
           {/* Text Column (Left) */}
           <div className={styles.textColumn}>
             <p className={styles.description}>
-              Score in Real time, get statistics and measure your performance every match.
+              {description.split('|').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < description.split('|').length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </p>
           </div>
 
@@ -30,8 +42,8 @@ const BasicSession = () => {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image 
-                src="/images/tablet-statistics.png" 
-                alt="Tablet displaying match statistics" 
+                src={image}
+                alt={title}
                 width={600} 
                 height={400} 
                 className="w-full h-auto object-cover rounded-2xl"
